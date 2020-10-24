@@ -1,0 +1,1 @@
+This folder contains all the analysis that are done in a jupyter notebook that will be done to complete the project.

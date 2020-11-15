@@ -1,10 +1,13 @@
+import pandas as pd
+import numpy as np
+
 def load_and_process(url_or_path_to_csv_file):
 
 
     def general_position (row):
         if row['BestPosition'] == 'ST' or row['BestPosition'] == 'CF' or row['BestPosition'] == 'RW' or row['BestPosition'] == 'LW':
             return 'Forward'
-        elif row['BestPosition'] == 'CB' or row['BestPosition'] == 'RB' or row['BestPosition'] == 'LB':
+        elif row['BestPosition'] == 'CB' or row['BestPosition'] == 'RB' or row['BestPosition'] == 'LB' or row['BestPosition'] == 'RWB' or row['BestPosition'] == 'LWB':
             return 'Defender'
         elif row['BestPosition'] == 'GK':
             return 'Goalkeeper'
@@ -13,14 +16,12 @@ def load_and_process(url_or_path_to_csv_file):
     def heightToCen (row):
         h = (row['Height'].split("'"))
         meters = (int(h[0])*12 + int(h[1])) * 0.0254
-        return round(meters, 2)
+        return int(meters*100)
 
-
-    df = pd.read_csv(url_or_path_to_csv_file)
 
     # Method Chain 1 (Load data and deal with missing data)
 
-    df1 = (df
+    df1 = ( pd.read_csv(url_or_path_to_csv_file)
            .drop(['ID','Photo', 'Flag','Potential','Club Logo','Special', 'International Reputation','Body Type',
                  'Real Face','Joined','Loaned From','Contract Valid Until','Position','Best Overall Rating',
                   'Release Clause','Marking','Value','Wage','Work Rate'], axis=1)

@@ -19,7 +19,7 @@ This FIFA 21 data is provided by a user in kaggle who got the data from fifainde
 
 ## References
 
-Data: https://www.kaggle.com/bryanb/fifa-player-stats-database?select=FIFA21_official_data.csv
-Data_License: https://creativecommons.org/publicdomain/zero/1.0/
-Data_Source: https://www.fifaindex.com/
-Approval: Piazza id_number - @212 sub_post @212_f1
+- Data: https://www.kaggle.com/bryanb/fifa-player-stats-database?select=FIFA21_official_data.csv
+- Data_License: https://creativecommons.org/publicdomain/zero/1.0/
+- Data_Source: https://www.fifaindex.com/
+- Approval: Piazza id_number - **@212 sub_post @212_f1**

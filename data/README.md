@@ -1,1 +1,8 @@
-This folder contains the raw data in the raw folder, while the processed data exists in the processed folder.
+# Data
+
+This folder contains the following:
+
+1. Raw Folder: *rawData*
+1. Processed Folder: *processedData*
+
+
